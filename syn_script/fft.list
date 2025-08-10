@@ -1,0 +1,14 @@
+lappend search_path ../verilog
+set net_list "\
+../asic_edu/verilog/fft/twf_m1_rom.sv \
+../asic_edu/verilog/fft/twf_m0_rom.sv \
+../asic_edu/verilog/fft/s_to_p.sv \
+../asic_edu/verilog/fft/reverse.sv \
+../asic_edu/verilog/fft/module2.sv \
+../asic_edu/verilog/fft/module1.sv \
+../asic_edu/verilog/fft/module0.sv \
+../asic_edu/verilog/fft/golden_top.sv \
+../asic_edu/verilog/fft/fft_top.sv \
+../asic_edu/verilog/fft/CBFP.sv \
+"
+analyze -format sverilog -library WORK $net_list
