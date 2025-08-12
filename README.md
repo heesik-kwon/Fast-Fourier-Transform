@@ -4,6 +4,18 @@
 
 ---
 
+
+# 📌 프로젝트 개요
+
+| 항목             | 내용                                                   |
+|------------------|--------------------------------------------------------|
+| **⏱️ 개발 기간** | 2024.07.18 ~ 2024.08.11                               |
+| **🖥️ 개발 환경**  | Vivado, VCS, VSCode                               |
+| **💻 언어**       | System Verilog                                           |
+| **📊 검증 방식**  | RTL Simulation, MATLAB RTL Simulation 비교, Timing Report 분석 |
+
+---
+
 # 🎯 설계 목표 (Front-end Process)
 
 | 단계 | 내용 | 세부 사항 |
@@ -24,8 +36,21 @@
 
 ---
 
-# 📈 RTL Simulation
-<img width="1109" height="340" alt="image" src="https://github.com/user-attachments/assets/f1f9f4a0-94c4-4ed1-9bda-d05cb5776e7b" />
+# 📈 module0~2 RTL Simulation(위: cosine / 아래: random)
+
+### 1️⃣ module0 RTL Simulation
+- `module0/bfly02`의 **버퍼 → 연산 → 포화 → 출력** 이 의도대로 동작.
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/69f0e3e7-dc1f-4c22-8336-8aabd8246630" />
+
+### 2️⃣ module1 RTL Simulation
+- `module1/bfly12`의 fac8_0 곱셈 → bfly11_tmp → temp_bfly11(22b) → 스케일/포화 → bfly11(14b)이 의도대로 동작.
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/2a161a85-a726-42fa-bb53-0c4c6f04ae2f" />
+
+### 3️⃣ module2 RTL Simulation
+- `module2/bfly22`의 bfly21_out → bfly22_tmp(16b) → sat_out(스케일/포화, 16b) → bfly22(13b) 출력이 의도대로 동작.
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/f22e477c-d021-4f48-b870-59951baa98d3" />
+
+---
 
 # ➕ module0~2 연산 결과 검증 (MATLAB vs RTL Sim)
 
@@ -53,6 +78,17 @@
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/d122e9e7-dbeb-4522-9a42-d78255f429cb" />
 
 ---
+
+# ⚛️ Synthesis
+
+### 1️⃣ Set Up Timing Check
+- 전체 Top 기준 슬랙 +0.54 ns로 **MET(충족)**
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/09c6b113-3cd7-4f3c-8481-278fa7fc5f61" />
+
+### 2️⃣ Cell Count / Area
+- 합성된 회로는 총 2,579,028,72의 셀 면적을 가지며, 약 264만 개의 셀로 구성 
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/a2054559-8b43-477a-89de-6594a091f537" />
+
 
 # 🧪 Performance Analysis
 
