@@ -89,8 +89,9 @@
 - 합성된 회로는 총 2,579,028,72의 셀 면적을 가지며, 약 264만 개의 셀로 구성 
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/a2054559-8b43-477a-89de-6594a091f537" />
 
+---
 
-# 🧪 Performance Analysis
+# 🛠️ Performance Analysis
 
 ### 1️⃣ 구조 비교(512-point / 16-point)
 - **변경 전 (Non-Pipelined Structure, 68clk)**  
