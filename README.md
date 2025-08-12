@@ -27,10 +27,10 @@
 # 📈 RTL Simulation
 <img width="1109" height="340" alt="image" src="https://github.com/user-attachments/assets/f1f9f4a0-94c4-4ed1-9bda-d05cb5776e7b" />
 
-# ➕ module0 ~ 2 연산 결과 검증 (MATLAB vs RTL Simulation)
+# ➕ module0~2 연산 결과 검증 (MATLAB vs RTL Sim)
 
 ### 1️⃣ 비교 개요
-- **대상 모듈**: `module0` 내 각 버터플라이 연산 블록 (`bfly02`, `bfly12`, `bfly22`)
+- **대상 모듈**: `module0~2` 내 각 버터플라이 연산 블록 (`bfly02`, `bfly12`, `bfly22`)
 - **검증 항목**:
   - **cosine 입력 데이터(왼쪽 파형)**
   - **random 입력 데이터(오른쪽 파형)**
