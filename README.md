@@ -126,7 +126,7 @@
 | **허수부 (`bfly02_m`)** | 아래 그래프 좌측 하단 | 아래 그래프 우측 하단 | ✅ |
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/8669c8c5-1e78-4898-b730-21ded712891d" />
 
-### 3️⃣ Synthesis Area 비교 (512-point vs 16-point)
+### 3️⃣ CBFP Module Synthesis Area 비교 (512-point vs 16-point)
 - **규모 차이**: 512-point 설계의 총 셀 면적은 16-point 대비 약 **6.32배** 큼.
 - **주요 원인**:
   - **Combinational Logic**: 512-point의 조합 논리 면적이 64K로, 16-point 대비 약 17.4배 큼 → FFT 크기에 따라 버터플라이 및 멀티플라이어 개수가 급격히 증가.
